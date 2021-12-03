@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>form</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id = "form">
+    <h>INTRODUCE TU JUEGO FAVORITO!</h>
+      <ion-item>
+        <ion-input  [(ngModel)]="nom" type="text" placeholder="nombre del juego" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="calificacion" type="number" placeholder="calificacion" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="genero" type="text" placeholder="Género" required></ion-input>
+      </ion-item>
+      <ion-button type="submit">Enviar</ion-button>
+  </div>
+</ion-content>

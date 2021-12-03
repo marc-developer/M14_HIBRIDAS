@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Juegos de deportes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let deporte of deportes">
+    <ion-item-sliding>
+      <ion-item routerLink = "/desc/{{i}}">
+        <ion-avatar slot="start">
+          <img src="/assets/img/{{deporte.img}}">
+        </ion-avatar>
+        <ion-label>
+          <h2>{{deporte.name}}</h2>
+          <p>{{deporte.plataforma}}</p>
+          <p>{{deporte.developers}}</p>
+          <p>{{deporte.puntuacio}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
