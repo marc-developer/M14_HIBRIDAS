@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        $.ajax({
+            url: "https://data.nasa.gov/resource/gh4g-9sfh.json",
+            type: "GET",
+            data: {
+                "$limit" : 500,
+                "$$app_token" : ""
+                }
+            }).done(function(data) {
+            alert("Retrieved " + data.length + " records from the dataset!");
+            console.log(data);
+            mostraTaula(data);
+        });
+        function mostraTaula (data) {
+            var table = `<table class ="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">name</th>
+                        <th scope="col">Class</th>
+                        <th scope="col">Mass(g)</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Geolocation</th>
+                    </tr>
+                </thead>
+                <tbody>`
+            for(var x = 0; x<= data.length; x++) {
+                table += `<tr>
+                                <th scope="row">${data[x].id}</th>
+                                <td>${data[x].name}</td>
+                                <td>${data[x].recclass}</td>
+                                <td>${data[x].mass}</td>
+                                <td>${data[x].year}</td>
+                                <td>${data[x].geolocation}</td>
+                        </tr>`   
+            }
+            table += `</tbody>
+                            </table>`
+            document.write(table);
+        }
+    </script>
+</body>
+</html>

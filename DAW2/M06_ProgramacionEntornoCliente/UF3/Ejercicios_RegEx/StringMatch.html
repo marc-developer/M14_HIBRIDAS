@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let texto = "Lorem ipsum dolor sit amet consectetur adipisicing elit.Excepturi maiores iusto, quos quaerat illo laboriosam placeat atque minus laborum tempora optio beatae nisi eius ut earum laudantium voluptates quidem illum";
+        let RegEx = texto.match(/\w+/, gi);
+        let palabras = 0;
+
+        for (x = 0; x < RegEx.length; x++) {
+            palabras++;
+        }
+        console.log(palabras);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numero = Math.floor(Math.random() * 100) + 1;
+
+        var intento = prompt("Numero?");
+        var numIntentos = 0;
+        if(intento == 0) {
+            document.write("Game Over");
+        }
+        else {
+            while(intento != numero) {
+                if( intento > numero) {
+                    intento = prompt("demasiado grande");
+                    numIntentos = numIntentos + 1;
+                }
+                if(intento < numero) {
+                    intento = prompt("demasiado pequeño");
+                    numIntentos = numIntentos + 1;
+                }
+                if ( intento == numero) {
+                    document.write("Acertado" + "<br>");
+                    document.write("Intentos necesitados: " + numIntentos);
+                    break;
+                }
+                if(intento == 0) {
+                    document.write("Game Over");
+                    break;
+                }
+                if(isNaN(intento) ) {
+                    intento = prompt("solo se admiten numeros");
+                    numIntentos = numIntentos + 1;
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>

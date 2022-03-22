@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var partidas = 1;
+
+        while(true) {
+            var tirada = prompt("piedra, papel o tijeras?");
+            var pcTirada = Math.floor(Math.random() * 3) + 1;
+
+            if(pcTirada === 1) {
+
+                partidas ++;
+
+                if(tirada === "piedra") {
+                    document.write("empate" + "<br />");
+                }
+                else if(tirada === "papel") {
+                    document.write("Ganaste!"+ "<br />");
+                    var pregunta = prompt("seguir jugando?");
+                    if(pregunta === "no") {
+                        break;
+                    }
+                    else {
+                        continue;
+                    }
+                }
+                else if(tirada === "tiejras") {
+                    document.write("perdiste"+ "<br />");
+                    var pregunta = prompt("seguir jugando?");
+                    if(pregunta === "no") {
+                        break;
+                    }
+                    else {
+                        continue;
+                    }
+                }
+            }
+            else if(pcTirada === 2) {
+
+                partidas ++;
+
+                if(tirada === "piedra") {
+                    document.write("perdiste"+ "<br />");
+                    var pregunta = prompt("seguir jugando?");
+                    if(pregunta === "no") {
+                        break;
+                    }
+                    else {
+                        continue;
+                    }
+                }
+                else if(tirada === "papel") {
+                    document.write("empate"+ "<br />");
+                }
+                else if(tirada === "tijeras") {
+                    document.write("Ganaste!"+ "<br />");
+                    var pregunta = prompt("seguir jugando?");
+                    if(pregunta === "no") {
+                        break;
+                    }
+                    else {
+                        continue;
+                    }
+                }
+            }
+            else {
+
+                partidas ++;
+
+                if (tirada === "piedra") {
+                    document.write("Ganaste!"+ "<br />");
+                    var pregunta = prompt("seguir jugando?");
+                    if(pregunta === "no") {
+                        break;
+                    }
+                    else {
+                        continue;
+                    }
+                }
+                else if(tirada === "papel") {
+                    document.write("perdiste"+ "<br />");
+                    var pregunta = prompt("seguir jugando?");
+                    if(pregunta === "no") {
+                        break;
+                    }
+                    else {
+                        continue;
+                    }
+                }
+                else if(tirada === "tijeras") {
+                    document.write("empate"+ "<br />");
+                }
+            }
+        }
+        document.write("rondas jugadas:" + partidas);
+        
+    </script>
+</body>
+</html>

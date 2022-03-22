@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <select id = "desplegable">
+            <option id = "google" value ="www.Google.com">Google</option>
+            <option id = "wiki" value = "www.wikipedia.com" >Wikipedia</option>
+            <option id = "w3" value ="www-W3Schools.com">W3Schools</option>
+        </select>
+
+        <script>
+            document.getElementById("desplegable").addEventListener("change",function() {
+                window.open("https://"+this.value);
+            })
+        </script>
+    </body>
+</html>

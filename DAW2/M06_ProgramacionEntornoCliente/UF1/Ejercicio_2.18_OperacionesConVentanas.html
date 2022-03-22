@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="newWindow()">Nueva ventana</button>
+    <button onclick="RmWindow()">Cierra ventana</button>
+    <button onclick="Redimensiona()">Redimensiona ventana</button>
+    <button onclick="MouFinestra()">Mou Finestra</button>
+    <button onclick="FocusWindow()">Focus</button>
+    <button onclick="PrintWindow()">Print</button>
+    <script>
+        var nuevaVentana;
+        function newWindow() {
+            nuevaVentana = window.open("" ,"window", "width = 300 , height = 500");
+            nuevaVentana.document.write("Nueva ventana")
+        }
+        function RmWindow() {
+            nuevaVentana.close();
+        }
+        function Redimensiona() {
+            nuevaVentana.resizeBy(320, 530);
+            //nuevaVentana.focus();
+        }
+        function MouFinestra() {
+            nuevaVentana.moveBy(15,20);
+        }
+        function FocusWindow() {
+            nuevaVentana.focus();
+        }
+        function PrintWindow() {
+            nuevaVentana.print();
+        }
+    </script>
+</body>
+</html>

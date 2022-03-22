@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var cadena = prompt("introduce cadena de caracteres");
+
+        var array = cadena.split(",");
+        var suma = 0;
+        var numero = "";
+        for(x= 0; x< array.length; x++) {
+            numero = parseInt(array[x]);
+            suma += numero;
+        }
+        document.write("La suma dels numeros es: " + suma + "<br>");
+        
+    </script>
+</body>
+</html>

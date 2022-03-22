@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let usuaris = {
+            noms : ["joan garcia" , "jaume pontons" , "ana riu", "marta aran" , "alex fornell", "mariona cots"],
+            trobar: function(parametro1, parametro2) {
+                switch (arguments.length()) {
+                    case 0: 
+                        return usuaris.noms;
+                    case 1:
+                        let usuarisTrobats = [];
+                        for(x = 0; x < usuaris.nom.length; x ++) {
+                            if(usuaris.nom[x].startsWith(parametro1)) {
+                                usuaris.Trobats.push(usuaris.noms[x]);
+                            }
+                        }
+                        return usuarisTrobats;
+                    case 2:
+                        let usuarisTrobats = [];
+                        for(x = 0; x < usuaris.nom.length; x ++) {
+                            var nombreSeparados = usuaris.noms[x].split(" ");
+                            if(nombreSeparados[0] === parametro1 && nombreSeparados[1] === parametro2) {
+                                usuarisTrobats.push(usuaris.noms[x]);
+                            }
+                        }
+                        return usuarisTrobats;
+                }
+            }
+        };  
+    </script>
+</body>
+</html>

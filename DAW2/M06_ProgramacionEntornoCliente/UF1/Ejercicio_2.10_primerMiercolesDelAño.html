@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var an1 = parseInt(prompt("Primer año?"));
+        var an2 = parseInt(prompt("Segundo año?"));
+
+        for(var x = an1; x <= an2; x++) {
+            var fecha = new Date('January 01, ' + x );
+            var diaSemana = fecha.getDay();
+            if ( diaSemana == 3) {
+                document.write("El año " + x + " cayó en miercoles" + "<br>");
+            }
+        }
+        document.write("Ningún año entre medias cayó en miercoles");
+    </script>
+</body>
+</html>

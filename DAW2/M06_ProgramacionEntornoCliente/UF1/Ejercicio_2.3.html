@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let text = prompt("introduce un texto","Esto es una prueba");
+        let letra = prompt("introduce caracter para bsucar", "a");
+
+        let contChar = 0;
+        for (x = 0; x < text.length; x ++) {
+            if(text.charAt(x) == letra) {
+                contChar++;
+            }
+        }
+        console.log(contChar);
+        if(contChar >= 2 && contChar <= 4) {
+            document.write("El caracter " + letra + " aparece entre 2 y 4 veces en el texto");
+        }
+        else { document.write("El caracter " + letra + " no aparece entre 2 y 4 veces en el texto");}
+        
+    </script>
+</body>
+</html>

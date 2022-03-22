@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let refranes= ["El que la sigue la consigue",
+                    "Mas vale prevenir que curar",
+                    "Quien todo lo quiere, todo lo pierde",
+                    "No por mucho madrugar amanece más temprano",
+                    "Persona prevenida vale por dos"];
+        
+        function bucle() {
+            for (x = 0; x < refranes.length; x ++) {
+                document.write(refranes[x]);
+            }
+        }
+        setInterval("bucle", 2000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var entrada = prompt("introduce un nombre");
+        let nombres = ["default"];
+        while(true) {
+            if(entrada.isEmpty()) {break;}
+            else {
+                for (x = 0; x < nombres.length; x ++) {
+                    if( nombres[x] == entrada) {alert("nombre repetido");}
+                    else {
+                        nombres.push(entrada);
+                        entrada = prompt("introduce un nombre");
+                    }
+                }
+            }
+        }
+        document.write(nombres);
+    </script>
+</body>
+</html>

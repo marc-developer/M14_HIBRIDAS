@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Document Object Model</title>
+    <script>
+        window.addEventListener("load", main);
+
+        function main () {
+            for(var x = 0; x < document.getElementsByTagName("h2").length; x ++) {
+                document.getElementsByTagName("h2")[x].addEventListener("click", muestraDetalles);
+            }
+        }
+
+        function muestraDetalles(e) {
+            let h2 = this; //this es el elemento document.getEleme....
+            let padre = h2.parentElement;
+            let region = parent.getAttribute("id");
+            var texto = 
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="norte">
+        <h2>Galicia</h2>
+        <ul>
+            <li>A Coruña</li>
+            <li>Lugo</li>
+            <li>Ourense</li>
+            <li>Pontevedra</li>
+        </ul>
+    </div>
+    <div id="sur">
+        <h2>Canarias</h2>
+        <ul>
+            <li>Santa Cruz de Tenerife</li>
+            <li>Las Palmas</li>
+        </ul>
+    </div>
+    <div id="texto"></div>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busqueda de Api</title>
+</head>
+<body>
+    <button><Emb>Busqueda</Emb></button>
+    <input id = "text" type = "text" value = "">
+    <p>Resultados de la api</p>
+    <div v-html = "Link.FUNCTIONVARIABLE"></div>
+    <script type = "text/javascript">
+        var apiUrl = "http://dog-api.kinduff.com/api/facts?number=5";
+        fetch(apiUrl).then(response => {
+            return response.json();
+        }).then(data => {
+            console.log(data);
+        }).catch(err => {
+            
+        });
+    </script>
+</body>
+</html>

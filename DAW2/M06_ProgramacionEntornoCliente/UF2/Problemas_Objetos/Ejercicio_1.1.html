@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text">
+        <button onclick="Ingresar()">Ingresar</button>
+        <button onclick="Retirar()">Retirar</button>
+    </form>
+    <script>
+
+        function Cuenta (titular, cantidad) {
+            this.titular = titular;
+            this.cantidad = cantidad;
+        }
+        let cuenta = new Cuenta ("Marc","100000000");
+
+        function Ingresar (valor) {
+            if(valor > 0) { 
+                cantidad = cantidad + valor;
+            }
+            else {}
+        }
+        function Retirada (valor) {
+            let resto = cantidad - valor;
+            if(resto < 0) {
+                cantidad = 0;
+            }
+            else {
+                cantidad = resto;
+            }
+        }
+        document.write(cantidad.Cuenta);
+    </script>
+</body>
+</html>

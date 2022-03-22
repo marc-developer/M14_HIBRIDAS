@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Persona(nombre, edad) {
+            this.nombre = nombre;
+            this.edad = edad;
+        }
+        function Empresa(contratao) {
+            this.contratao = function (persona) {
+                if(persona.edad<=60) {
+                    document.write("Contratao<br>");
+                }
+                else {
+                    document.write("A la calle putita<br>");
+                }
+            }
+        }
+        var persona = new Persona("Juan", "92");
+        var persona2 = new Persona ("Marc", "28");
+
+        var empresa = new Empresa();
+        empresa.contratao(persona);
+        empresa.contratao(persona2);
+    </script>
+</body>
+</html>

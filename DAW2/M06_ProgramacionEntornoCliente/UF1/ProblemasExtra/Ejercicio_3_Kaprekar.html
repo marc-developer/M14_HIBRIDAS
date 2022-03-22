@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numero = prompt("introduce un numero de 4 digitos con al menos dos de ellos diferentes");
+        function cuatroDigitos(numero) {
+            if(numero.lenght() < 4 ) {
+                for (var x = 0; x <numero.lenght(); x ++) {
+                    numero = "0" + numero;
+                }
+                return numero;
+            }
+            else if (numero.lenght() > 4 ) {
+                alert("no puede tener más de 4 digitos");
+            }
+            else {
+                return numero;
+            }
+        }
+        function repiteNumero(numero) {
+            numeroCaracter = numero.split('');
+            if(numeroCaracter[0] === numeroCaracter[1] && numeroCaracter[2] === numeroCaracter[3] && numeroCaracter[2] === numeroCaracter[1]) {
+                alert("debe contener al menos dos numeros diferentes");
+            }
+            else{
+                return numero;
+            }
+        }
+        
+    </script>
+</body>
+</html>
